@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".icqActivity"
+    android:background="@drawable/gradient">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Calcule seu ICQ"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnIcqCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:background="@color/button"
+        android:text="Calcular"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtIcqQuadril" />
+
+    <EditText
+        android:id="@+id/edtIcqCintura"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tamanho da cintura(cm)"
+        android:inputType="number|numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/edtIcqQuadril"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tamanho do quadril (cm)"
+        android:inputType="number|numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edtIcqCintura"
+        app:layout_constraintStart_toStartOf="@+id/edtIcqCintura"
+        app:layout_constraintTop_toBottomOf="@+id/edtIcqCintura" />
+
+    <TextView
+        android:id="@+id/txvIcqResultado"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIcqCalcular" />
+
+    <Spinner
+
+        android:id="@+id/spnIcqIdade"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:popupBackground="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/edtIcqQuadril"
+        app:layout_constraintStart_toStartOf="@+id/edtIcqQuadril"
+        app:layout_constraintTop_toBottomOf="@+id/edtIcqQuadril" />
+
+    <Spinner
+
+        android:id="@+id/spnIcqGenero"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#FFFFFF"
+        android:popupBackground="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/spnIcqIdade"
+        app:layout_constraintStart_toStartOf="@+id/spnIcqIdade"
+        app:layout_constraintTop_toBottomOf="@+id/spnIcqIdade" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Obs: Caso não se encaixe em nenhuma faixa etária, escolha a mais proxima."
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIcqCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
